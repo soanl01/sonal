@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DietGenius website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css" integrity="sha512-3//o69LmXw00/DZikLz19AetZYntf4thXiGYJP6L49nziMIhp6DVrwhkaQ9ppMSy8NWXfocBwI3E8ixzHcpRzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+
+</head>
+<body>
+    <header>
+        <nav class="nav border">
+            <ul class="nav-list">
+                <div class="logo"><img src="Screenshot 2023-10-08 171951.png" alt="logo"></div>
+              <li><a href="index.html"> Home</a></li>
+              <li><a href="about.html"> About</a></li>
+              <li><a href="dietplans.html"> Diet Plans</a></li>
+              <li><a href="#resources"> Report</a></li> 
+              <li><a href="NutritionPlan.html"> Nutrition Tip </a></li>
+              <li><a href="#Blog"> Blog </a></li>
+              <li><a href="FAQ.html"> FAQ </a></li>
+              <li><a href="#Contact us"> Contact us </a></li>
+            </ul>
+            <div class="but">
+                <a href="singup.html">
+                    <button class="button" id="form-open">Sign up</button></a>
+                    <!-- <a href="signin.html"><h5>Already a member? Sign in.</h5></a> -->
+                    
+          </div>
+          
+        </nav>
+        
+       
+</header>
+<div class="calories">
+    <div class="progress " id="progress"></div> 
+        <div class="step"><small>Information</small></div>
+        <div class="step"><small>BMI</small></div>
+        <div class="step"><small>Meal Consumption</small></div>
+        <div class="step"><small>Nutrition Report</small></div>   
+    </div>
+    
+    <!-- information -->
+    <!-- information -->
+<div class="conntainer">
+    <div class="slidepage" id="slidepage">
+        <form id ="form-1">
+            <div class="personalinfo ">
+                <div class="input-personalinfo">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-personalinfo">
+                    <label>Age(in year)</label>
+                    <input type="number" placeholder="Enter your age" required>
+                </div>
+                <div class="input-personalinfo">
+                    <label>Gender</label>
+                    <select class="select-male">
+                        <option value="choose">Select Gender</option>
+                        <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    
+                </select>
+            </div>
+            <div class="input-personalinfo">
+                <label>Email</label>
+                <input type="text" placeholder="Enter your email" required >
+            </div>
+        </div>
+        <div class="next">
+            <button class="button " id="next-btn1">Next</button>
+        </div>
+    </form> 
+    <!-- BMI -->
+    <form id="form-2">
+        <div class="personalinfo" >
+            <function>
+            <div class="input-personalinfo">
+                <label for="height">Height(in cm)</label>
+             <input type="number" id="height" placeholder="Enter your height" required/>
+            </div>
+            <div class="input-personalinfo">
+                <label for="weight">Weight(in kg)</label>
+                <input type="number" id="weight" placeholder="Enter your weight" required/>
+            </div>
+            <div class="outtput">
+                <div class="bmi-is">
+                <p id="bmii">0</p>
+                </div>
+                <p id="dessc">N/A</p>
+            </div>
+            
+            <div>
+                 <!-- <button type="submit" class="btn1">Submit</button>   -->
+                <button type="reset" class="btn1">Submit</button> 
+            </div> 
+            
+         </function>
+        
+        
+        <div class="bmi-scale">
+            <div style="--color:var(--underweight)">
+                <h4>Underweight</h4>
+                <p>&lt;18.5</p>
+            </div>
+            <div style="--color:var(--normal)">
+                <h4>Normal</h4>
+                <p>18.5 - 25</p>
+            </div>
+            <div style="--color:var(--overweight)">
+                <h4>Overweight</h4>
+                <p>25 - 30</p>
+            </div>
+            <div style="--color:var(--obese)">
+                <h4>  Obese  </h4>
+                <p>&ge; 30</p>
+            </div>
+        </div>
+        
+        <!-- <div>
+             <button type="submit" class="btn1">Submit</button>  
+            <button type="reset" class="btn1">Submit</button> 
+        </div> -->
+    <!-- </function> -->
+        <div class="next">
+            <div class="back ">
+                
+                <div class="back1">
+                    <button class="button " id="back-btn1">Back</button>
+                </div>
+                <button class="button " id="next-btn2">Next</button>
+        </div>
+        </div>
+    </div>
+</form>
+
+
+
+<!-- meal consumption  -->
+<form id="form-3">
+    <div class="personalinfo">
+        <h2> Meal List</h2>
+        <div class="input-personalinfo">
+            <label>Meal Type</label>
+            <select name="city" id="mealtype" required>
+                <option value="choose"></option>
+                <option value="male">Breakfast</option>
+                <option value="female">Lunch</option>
+                <option value="other">Even Snacks</option>
+                <option value="other">Dinner</option>
+            </select>
+        </div>
+        <div class="input-personalinfo">
+            <label>Meal Taken</label>
+            <input type="text" id="mealtaken" placeholder="" required>
+        </div>
+        <div class="input-personalinfo">
+            <label>Qty:</label>
+            <select name="city" required>
+                <option value="choose"></option>
+                <option value="male">1</option>
+                <option value="female">2</option>
+                <option value="other">3</option>
+                <option value="other">4</option>
+                <option value="other">5</option>
+                <option value="other">6</option>
+                <option value="other">7</option>
+                    <option value="other">8</option>
+                    <option value="other">9</option>
+                    <option value="other">10</option>
+                    <option value="other">11</option>
+                    <option value="other">12</option>
+                    
+                </select>
+            </div>
+        </div>
+        <div class="add">
+            <button class="btn1">Add</button>
+        </div>
+        <div class="next">
+            <div class="back">
+                <button class="button back" id= "back-btn2">Back</button>
+                <button class="button" id= "next-btn3">Submit</button>
+            </div>
+        </div>
+    </form>
+    <!-- nutrition report  -->
+    <form id="form-4">
+        <div class="personalinfo" >
+            <div class="tt">
+                <div class="icon">
+                    <ul>
+                        <li><div class="box">Breakfast</div>
+                            <div class="summary">
+                                <div class="icon">
+                                    <i class="fa-solid fa-wheat-awn"></i>
+                                <div>Carbohydrates</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-dna"></i>
+                                <div>Protein</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-droplet"></i>
+                                <div>Fats</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon icontotal">
+                                <p> &Sigma;</p>
+                                <div>Total</div>
+                                <p id="value">--</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><div class="box">Lunch</div>
+                        
+                        <div class="summary">
+                            <div class="icon">
+                                <i class="fa-solid fa-wheat-awn"></i>
+                                <div>Carbohydrates</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-dna"></i>
+                                <div>Protein</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-droplet"></i>
+                                <div>Fats</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon icontotal">
+                                <p> &Sigma;</p>
+                                <div>Total</div>
+                                <p id="value">--</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><div class="box">Even Snacks</div>
+                        <div class="summary">
+                            <div class="icon">
+                                <i class="fa-solid fa-wheat-awn"></i>
+                                <div>Carbohydrates</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-dna"></i>
+                                <div>Protein</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-droplet"></i>
+                                <div>Fats</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon icontotal">
+                                <p> &Sigma;</p>
+                                <div>Total</div>
+                                <p id="value">--</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><div class="box">Dinner</div>
+                        <div class="summary">
+                            <div class="icon">
+                                <i class="fa-solid fa-wheat-awn"></i>
+                                <div>Carbohydrates</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-dna"></i>
+                                <div>Protein</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-droplet"></i>
+                                <div>Fats</div>
+                                <p id="value">--</p>
+                            </div>
+                            <div class="icon icontotal">
+                                <p> &Sigma;</p>
+                                <div>Total</div>
+                                <p id="value">--</p>
+                            </div>
+                        </div>
+                    </li>
+                   <div class="total">
+                       <li><div class="box">Total</div>
+                        <div class="summary">
+                            <div class="icon">
+                                <i class="fa-solid fa-wheat-awn"></i>
+                                    <div>Carbohydrates</div>
+                                    <p id="value">--</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-dna"></i>
+                                    <div>Protein</div>
+                                    <p id="value">--</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-droplet"></i>
+                                    <div>Fats</div>
+                                    <p id="value">--</p>
+                                </div>
+                                <div class="icon icontotal">
+                                    <p> &Sigma;</p>
+                                    <div>Total</div>
+                                    <p id="value">--</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    <div class="next">
+        <div class="back">
+            <!-- <button class="button " id= "back-btn3">Back</button> -->
+             <button class="button" id="submit1">Back to Home</button> 
+        </div>
+     </div> 
+</form>
+</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="script1.js"></script>
+<script src="bmi.js"></script>
+<script src="meal-con.js"></script>
+<!-- <script>
+    const mealType = document.getElementById('mealtype');
+    const mealTaken = document.getElementById('mealtaken');
+    const mealQuntity = document.getElementById('quntity');
+    const appId ='31d89fd7';
+    const apiKey ='25635e6bfc2d73e10be75f3dee642f9';
+
+    function fetchRecipe() {
+        let title = mealType.value;
+        let ingre = mealTaken.value.split('\n');
+
+    return fetch(`https://api.edamam.com/api/nutrition-details?app_id=${appId}&app_key=${apiKey}`,{
+        method: 'POST',
+        cache: 'no-cache',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        boby: JSON.stringify({title,ingre})
+    }).them(response => response.json());
+    }
+    document.getElementById('form-3').addEventListener('submit' , function(e){
+        e.preventDefault();
+        fetchRecipe().them(data =>{
+          console.log(data);
+        });
+    })
+</script> -->
+</body>
+</html>
+
